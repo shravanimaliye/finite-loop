@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="tab.css">
+<body>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Except')" id="defaultOpen">Exception Handling</button>
+  <button class="tablinks" onclick="openCity(event, 'GUI')">Graphics</button>
+  <button class="tablinks" onclick="openCity(event, 'file')">File Handling</button>
+  <button class="tablinks" onclick="openCity(event, 'Django')">Django</button>
+</div>
+
+<div id="Except" class="tabcontent">
+  <h3>Exception Handling</h3>
+  <p><ul><li>When an error occurs, or exception as we call it, Python will normally stop and generate an error message.These exceptions can be handled using the try statement</li><br></ul>
+    <button class="accordion">Try block</button>
+<div class="panel">
+  <p>The try block will generate an exception, because x is not defined:<br><br>
+
+try:<br>
+  print(x)<br>
+except:<br>
+  print("An exception occurred")<br></p>
+</div>
+
+<button class="accordion">FInally block</button>
+<div class="panel">
+  <p>The finally block, if specified, will be executed regardless if the try block raises an error or not.<br><br>
+try:<br>
+  print(x)<br>
+except:<br>
+  print("Something went wrong")<br>
+finally:<br>
+  print("The 'try except' is finished")<br></p>
+</div>
+
+<button class="accordion">Else block</button>
+<div class="panel">
+  <p>You can use the else keyword to define a block of code to be executed if no errors were raised:<br><br>
+In this example, the try block does not generate any error:<br><br>
+
+try:<br>
+  print("Hello")<br>
+except:<br>
+  print("Something went wrong")<br>
+else:<br>
+  print("Nothing went wrong")<br></p>
+</div>
+  
+</div>
+
+<div id="GUI" class="tabcontent">
+  <h3>Graphics</h3>
+  <p>Python offers multiple options for developing GUI (Graphical User Interface). Out of all the GUI methods, tkinter is most commonly used method. It is a standard Python interface to the Tk GUI toolkit shipped with Python. Python with tkinter outputs the fastest and easiest way to create the GUI applications. Creating a GUI using tkinter is an easy task.<br><br>
+To create a tkinter:
+
+Importing the module – tkinter
+Create the main window (container)
+Add any number of widgets to the main window
+Apply the event Trigger on the widgets.<br><br>
+Importing tkinter is same as importing any other module in the python code. Note that the name of the module in Python 2.x is ‘Tkinter’ and in Python 3.x is ‘tkinter’.
+
+import tkinter
+There are two main methods used you the user need to remember while creating the Python application with GUI.
+
+</p> 
+</div>
+
+<div id="file" class="tabcontent">
+  <h3>File Handling</h3>
+  <p>Python too supports file handling and allows users to handle files i.e., to read and write files, along with many other file handling options, to operate on files. <br><br>The concept of file handling has stretched over various other languages, but the implementation is either complicated or lengthy, but alike other concepts of Python, this concept here is also easy and short.<br><br> Python treats file differently as text or binary and this is important. Each line of code includes a sequence of characters and they form text file.<br><br> Each line of a file is terminated with a special character, called the EOL or End of Line characters like comma {,} or newline character. It ends the current line and tells the interpreter a new one has begun. Let’s start with Reading and Writing files.<br><br></p> 
+</div>
+
+<div id="Django" class="tabcontent">
+  <h3>Django</h3>
+  <p>Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. Built by experienced developers, Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It is free and open source, has a thriving and active community, great documentation, and many options for free and paid-for support. 
+
+<br><br>Django helps you write software that is:
+
+Complete
+Django follows the "Batteries included" philosophy and provides almost everything developers might want to do "out of the box". Because everything you need is part of the one "product", it all works seamlessly together, follows consistent design principles, and has extensive and up-to-date documentation.<br><br>
+Versatile
+Django can be (and has been) used to build almost any type of website — from content management systems and wikis, through to social networks and news sites. It can work with any client-side framework, and can deliver content in almost any format (including HTML, RSS feeds, JSON, XML, etc). The site you are currently reading is based on Django!<br><br>
+Secure
+Django helps developers avoid many common security mistakes by providing a framework that has been engineered to "do the right things" to protect the website automatically. For example, Django provides a secure way to manage user accounts and passwords, avoiding common mistakes like putting session information in cookies where it is vulnerable (instead cookies just contain a key, and the actual data is stored in the database) or directly storing passwords rather than a password hash.<br><br></p>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

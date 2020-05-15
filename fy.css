@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Century Gothic;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+}
+
+.left {
+  left: 0;
+  background-color:#1B1B1B ;
+}
+
+.right {
+  right: 0;
+  background-color:#141414;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  text-align: center;
+  color: white;
+}
+.aa{
+  color: white;
+ 
+}
+
+.ab{
+	color:#39ff14;
+}
+.ac{
+  width: 100%;
+  padding: 120px 300px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: black;
+
+}

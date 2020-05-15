@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<link rel="stylesheet" href="tab.css">
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Variables')" id="defaultOpen">Variables</button>
+  <button class="tablinks" onclick="openCity(event, 'BDT')">Basic Data Types</button>
+  <button class="tablinks" onclick="openCity(event, 'List')">Lists</button>
+  <button class="tablinks" onclick="openCity(event, 'Tup')">Tuples</button>
+  <button class="tablinks" onclick="openCity(event, 'Set')">Sets</button>
+  <button class="tablinks" onclick="openCity(event, 'Dict')">Dictionary</button>
+  <button class="tablinks" onclick="openCity(event, 'Loop')">Looping Structures</button>
+  <button class="tablinks" onclick="openCity(event, 'func')">Functions</button>
+</div>
+
+<div id="Variables" class="tabcontent">
+  <h3 style="color:#39ff14;">Variables</h3>
+  <p>A Python variable is a reserved memory location to store values. In other words, a variable in a python program gives data to the computer for processing.<br><br>Every value in Python has a datatype. Different data types in Python are Numbers, List, Tuple, Strings, Dictionary, etc. Variables can be declared by any name or even alphabets like a, aa, abc, etc.<br><br>A variable in Python can be assigned a value using the simple assignment operator(=). Numerical values can be assigned directly while string or character type variables require the use of either single quotes or double quotes.<br><br>A variable in Python can be re-declared to assign a new value to it. The beauty of Python is that while declaring a variable, you need not mention the data type of that variable as Python recognizes the data type on its own. the type() function is used to find out the data type of a particular variable.<br><br>
+  <b>EXAMPLES</b><br><br>a=5<br><br>b=6.156<br><br>c="Python"<br><br>d='ABCD'<br><br>The print functions will simply display the values assigned to the variables.<br><br>print(type(c))<br><br>The above statement would display the type as 'str' as the variable c is of string data type.</p>
+</div>
+
+<div id="BDT" class="tabcontent">
+  <h3 style="color:#39ff14;">Basic Data Types</h3>
+  <button class="accordion">Numerical Data Types</button>
+<div class="panel">
+  <p>Python has two important data types for numbers- Integers and Floating point numbers.</p>
+  <ul>
+    <li>Integers(int) are used for positive as well as negative non-decimal numbers. For example: a=12, b=-15</li><br>
+    <li>Floating point numbers(float) are used for positivie as well as negative decimal numbers. For example c=4.142, d=-24.62</li>
+  </ul>
+</div>
+<button class="accordion">Character Data Type</button>
+<div class="panel">
+  <p>Python has only one string data type for supporting sentences as well as characters<br></p>
+  <ul>
+    <li>Strings are enclosed in single quotes or double quotes. For example, s="ACE" or s='ACE'.</li><br>
+    <li>If you want to declare only a single character then it is defined as a string literal of length 1.</li><br>
+    </ul><p>Python supports various operations for string manipulation which will be explained in the next module.</p>
+</div>
+
+<button class="accordion">Boolean Data type</button>
+<div class="panel">
+  <p>Boolean values are the two constant objects False and True.</p>
+<ul>
+<li>They are used to represent truth values (other values can also be considered false or true).</li><br>
+<li>In numeric contexts (for example, when used as the argument to an arithmetic operator), they behave like the integers 0 and 1, respectively.</li><br>
+<li>The built-in function bool() can be used to cast any value to a Boolean, if the value can be interpreted as a truth value. They are written as False and True, respectively.</li></ul>
+</div>
+
+<button class="accordion">Unique Numberic Data type</button>
+<div class="panel">
+  <p>Python also supports complex numbers and the conversion of numbers in various systems of representation.</p>
+<ul>
+<li>Complex numbers can be denoted in the following format: c=2+3j.</li><br>
+<li>Python provides the functionality of displaying numbers in the binary, hexadecimal and octal formats.</li><br>
+<li>Binary uses 1 and 0 only. The bin() function is used for conversion. Example: bin(a)</li><br>
+<li>Octal is used for representing numbers with respect to 8 digits(0 to 7). The oct() function is used for conversion. Example: oct(b)</li><br>
+<li>Hexadecimal uses 10 digits(0 to 9) and 6 alphabets(A to F). The hec() function is used for conversion. Example: hex(c)</li>
+</ul>
+</div>
+</div>
+
+<div id="List" class="tabcontent">
+  <h3 style="color:#39ff14;">Lists</h3>
+  <p><ul><li>List is an ordered sequence of items. It is one of the most used datatype in Python and is very flexible. All the items in a list do not need to be of the same type.</li><br>
+<li>Declaring a list is pretty straight forward. Items separated by commas are enclosed within brackets [ ]. Example: a = [1, 2.2, 'python']</li><br></ul>
+List and String Manipulations are similar.
+<ul>
+  <li>Accessing: Returns value at a particular index. Like: l[0]=returns value at 0th index.</li><br>
+  <li>Slicing: Returns all va;ues between a particular range. Example: l[0:4]=returns first 4 values.</li><br>
+  <li>Concatenation: Concatenates two lists or strings together, Example: s=a+b</li><br>
+</ul>
+</p>
+<p>Python also supports negative indexing. Negative indexing starts from the end. Lists are mutable.
+</p>
+<p><b>Methods for list manipulation:</b></p>
+<table align="center" border=2>
+  <tr>
+    <th>METHOD</th><th>DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td>append()</td>
+    <td>Add single element to list</td>
+  </tr>
+  <tr>
+    <td>insert()</td>
+    <td>Add multiple elements to list</td>
+  </tr>
+  <tr>
+    <td>count()</td>
+    <td>Returns occurrences of element in a list</td>
+  </tr>
+   <tr>
+    <td>pop()</td>
+    <td>Removes element at the given index</td>
+  </tr>
+   <tr>
+    <td>sort()</td>
+    <td>Sorts the elements in a list</td>
+  </tr>
+   <tr>
+    <td>reverse()</td>
+    <td>Reverses elements in a list</td>
+  </tr>
+</table>
+</div>
+
+<div id="Tup" class="tabcontent">
+  <h3 style="color:#39ff14;" >Tuples</h3>
+  <p><ul><li>Tuple is an ordered sequence of items same as list.The only difference is that tuples are immutable. </li><br>
+    <li>Tuples once created cannot be modified.</li><br>
+    <li>It is defined within parentheses () where items are separated by commas.</li><br>
+    <li>Example: t = ("apple", "banana", "cherry")</li></ul></p>
+    <p><b>Operations for Tuple manipulation</b></p>
+    <table align="center" border=2>
+      <tr>
+        <th>EXPRESSION</th>
+        <th>RESULT</th>
+        <th>OPERATION</th>
+        </tr>
+        <tr>
+          <td>len((1, 2, 3))</td>
+          <td>3</td>
+          <td>LENGTH</td>
+        </tr>
+        <tr>
+          <td>(1, 2, 3) + (4, 5, 6)</td>
+          <td>(1, 2, 3, 4, 5, 6)</td>
+          <td>CONCATENATION</td>
+        </tr>
+        <tr>
+          <td>('Hi!',) * 4  </td>
+          <td>('Hi!', 'Hi!', 'Hi!', 'Hi!')</td>
+          <td>REPITITION</td>
+        </tr>
+        <tr>
+          <td>for x in (1, 2, 3): print x,</td>
+          <td>1 2 3</td>
+          <td>ITERATION</td>
+        </tr>
+        <tr>
+          <td>S[0]</td>
+          <td>1</td>
+          <td>SLICING</td>
+        </tr>
+      </table>
+    <p><b>Tuple has 2 direct methods which it can use</b></p>
+    <table align="center" border=2>
+  <tr>
+    <th>METHOD</th><th>DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td>count()</td>
+    <td>Returns occurrences of element in a tuple</td>
+  </tr>
+  <tr>
+    <td>index()</td>
+    <td>  returns smallest index of element in tuple</td>
+  </tr>
+</table>
+</div>
+
+<div id="Set" class="tabcontent">
+  <h3 style="color:#39ff14;">Sets</h3>
+  <p><ul><li>Set is an unordered collection of unique items.</li><br><li> Set is defined by values separated by comma inside braces { }. Items in a set are not ordered.</li><br>
+    <li>We can perform set operations like union, intersection on two sets. Set have unique values. They eliminate duplicates.</li><br>
+    <li>Since, sets are unordered collection, indexing has no meaning. Hence the slicing operator [] does not work.</li><br>
+    <li>Example: s = {"apple", "banana", "cherry"}</li></ul>
+    <p><b>Methods for Sets</b></p>
+    <table align="center" border=2>
+      <tr>
+        <th>METHOD</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td>add()</td>
+        <td>Adds an element to the list</td>
+      </tr>
+      <tr>
+        <td>clear()</td>
+        <td>Removes all the elements from the set</td>
+      </tr>
+      <tr>
+        <td>copy()</td>
+        <td>Returns a copy of the set</td>
+      </tr>
+      <tr>
+        <td>difference()</td>
+        <td>Returns a set containing the difference between two or more sets</td>
+      </tr>
+       <tr>
+        <td>intersection()</td>
+        <td>Returns a set, that is the intersection of two other sets</td>
+      </tr>
+       <tr>
+        <td>union()</td>
+        <td>Return a set containing the union of sets</td>
+      </tr>
+      <tr>
+        <td>pop()</td>
+        <td>Removes an element form the set</td>
+      </tr>
+      <tr>
+        <td>remove()</td>
+        <td>Removes the specified element</td>
+      </tr>
+    </table>
+</p>
+</div>
+
+<div id="Dict" class="tabcontent">
+  <h3 style="color:#39ff14;">Dictionary</h3>
+  <p><ul><li>Dictionary is an unordered collection of key-value pairs.</li><br><li>It is generally used when we have a huge amount of data.</li><br><li>Dictionaries are optimized for retrieving data. We must know the key to retrieve the value.</li><br><li>In Python, dictionaries are defined within braces {} with each item being a pair in the form key:value.</li><br><li> Key and value can be of any type.</li><br><li>Example: dict = {
+  "brand": "Ford","model": "Mustang","year": 1964}</li></ul></p>
+    <p><b>Methods for Dictionary</b></p>
+    <table align="center" border=2>
+      <tr>
+        <th>METHOD</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td>clear()</td>
+        <td>Removes all the elements from the dictionary</td>
+      </tr>
+      <tr>
+        <td>copy()</td>
+        <td>Returns a copy of the dictionary</td>
+      </tr>
+      <tr>
+        <td>fromkeys()</td>
+        <td>Returns a dictionary with the specified keys and values</td>
+      </tr>
+      <tr>
+        <td>get()</td>
+        <td>Returns the value of the specified key</td>
+      </tr>
+      <tr>
+        <td>keys()</td>
+        <td>Returns a list containing the dictionary's keys</td>
+      </tr>
+      <tr>
+        <td>values()</td>
+        <td>Returns a list of all the values in the dicitonary</td>
+      </tr>
+    </table>
+</div>
+
+<div id="Loop" class="tabcontent">
+  <h3 style="color:#39ff14;">Looping Structures</h3>
+  <p>Python has two primitive loop commands:
+<ul><li>while loops</li><br><li>for loops</li></ul></p>
+<button class="accordion">While loop</button>
+<div class="panel">
+  <p>With the while loop we can execute a set of statements as long as a condition is true.<br><ul><li>Example: Print i as long as i is less than 6:
+<br>i = 1<br>
+while i < 6:<br>
+  print(i)<br>
+  i += 1</li><br>
+<li>Note: remember to increment i, or else the loop will continue forever.</li><br>
+
+<li>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.</li>
+</ul>
+</p>
+</div>
+
+<button class="accordion">For loop</button>
+<div class="panel">
+  <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).<br>
+    <ul><li>This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.</li><br><li>With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</li><br><li>Example: Print each fruit in a fruit list:<br>
+fruits = ["apple", "banana", "cherry"]<br>
+for x in fruits:<br>
+  print(x)</li><br><li>The for loop does not require an indexing variable to set beforehand.</li></p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+</div>
+
+<div id="func" class="tabcontent">
+  <h3 style="color:#39ff14;">Functions</h3>
+  <p>A tutorial on functions in Python that covers how to write functions, how to call them, and more!
+Functions are an essential part of the Python programming language: you might have already encountered and used some of the many fantastic functions that are built-in in the Python language or that come with its library ecosystem. However, as a Data Scientist, you’ll constantly need to write your own functions to solve problems that your data poses to you.</p><br><br>
+
+<p>That’s why this post will introduce you to functions in Python. You’ll cover the following topics:</p><br><br>
+
+<p>Functions in Python
+Functions vs Methods
+Parameters vs Arguments
+How To Define a Function: User-Defined Functions (UDFs)
+The returnstatement
+How To Call a Function
+How To Add Docstrings to a Python Function
+Function Arguments in Python
+Global vs Local Variables
+Anonymous Functions in Python
+Using main() as a Function</p><br><br>
+ 
+
+<p>(To practice further, try DataCamp’s Python Data Science Toolbox (Part 1) Course!)</p><br><br>
+
+<p>Functions in Python
+You use functions in programming to bundle a set of instructions that you want to use repeatedly or that, because of their complexity, are better self-contained in a sub-program and called when needed. That means that a function is a piece of code written to carry out a specified task. To carry out that specific task, the function might or might not need multiple inputs. When the task is carried out, the function can or can not return one or more values.</p><br><br>
+
+<p>There are three types of functions in Python:</p><br><br>
+
+<p>Built-in functions, such as help() to ask for help, min() to get the minimum value, print() to print an object to the terminal,… You can find an overview with more of these functions here.
+User-Defined Functions (UDFs), which are functions that users create to help them out; And
+Anonymous functions, which are also called lambda functions because they are not declared with the standard def keyword.</p><br><br>
+
+<p>Functions vs Methods
+A method refers to a function which is part of a class. You access it with an instance or object of the class. A function doesn’t have this restriction: it just refers to a standalone function. This means that all methods are functions, but not all functions are methods.</p><br><br>
+</div>
+
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>

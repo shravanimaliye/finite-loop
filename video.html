@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<link rel="stylesheet" href="vid.css">
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Variables')" id="defaultOpen">Variables</button>
+  <button class="tablinks" onclick="openCity(event, 'BDT')">Basic Data Types</button>
+  <button class="tablinks" onclick="openCity(event, 'List')">Lists</button>
+  <button class="tablinks" onclick="openCity(event, 'Tup')">Tuples</button>
+  <button class="tablinks" onclick="openCity(event, 'Set')">Sets</button>
+  <button class="tablinks" onclick="openCity(event, 'Dict')">Dictionary</button>
+  <button class="tablinks" onclick="openCity(event, 'Loop')">Looping Structures</button>
+  <button class="tablinks" onclick="openCity(event, 'func')">Functions</button>
+</div>
+
+<div id="Variables" class="tabcontent">
+  <h3>Variables</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/olH6T7iicQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<div id="BDT" class="tabcontent">
+  <h3>Basic Data Types</h3>
+  <button class="accordion">Numerical Data Types</button>
+<div class="panel">
+  <br>
+  <iframe width="900" height="500" src="https://www.youtube.com/embed/5yhn0MFLcu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion">Character Data Type</button>
+<div class="panel">
+  <br>
+  <iframe width="900" height="500" src="https://www.youtube.com/embed/k9TUPpGqYTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<button class="accordion">Boolean Data type</button>
+<div class="panel">
+  <br>
+  <iframe width="900" height="500" src="https://www.youtube.com/embed/PkjXx92a2Q4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<button class="accordion">Unique Numberic Data type</button>
+<div class="panel">
+  <br>
+  <iframe width="900" height="500" src="https://www.youtube.com/embed/oLb7x1Tgddw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="List" class="tabcontent">
+  <h3>Lists</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/9rLdQP3g4fw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<div id="Tup" class="tabcontent">
+  <h3>Tuples</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/wRC4H-k57eg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<div id="Set" class="tabcontent">
+  <h3>Sets</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/r3R3h5ly_8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<div id="Dict" class="tabcontent">
+  <h3>Dictionary</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/rZjhId0VkuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<div id="Loop" class="tabcontent">
+  <h3>Looping Structures</h3>
+  <p>Python has two primitive loop commands:
+<ul><li>while loops</li><br><li>for loops</li></ul></p>
+<button class="accordion">While loop</button>
+<div class="panel">
+  <br>
+  <p>
+    <iframe width="900" height="500" src="https://www.youtube.com/embed/ytXfaew7bCA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+</div>
+
+<button class="accordion">For loop</button>
+<div class="panel">
+ <br>
+<p><iframe width="900" height="500" src="https://www.youtube.com/embed/fBIvTEOTzvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+</div>
+
+<div id="func" class="tabcontent">
+  <h3>Functions</h3>
+  <p><iframe width="900" height="500" src="https://www.youtube.com/embed/oSPMmeaiQ68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>

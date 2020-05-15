@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="fy.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript"> 
+// output functions are configurable.  This one just appends some text
+// to a pre element.
+function outf(text) { 
+    var mypre = document.getElementById("output"); 
+    mypre.innerHTML = mypre.innerHTML + text; 
+} 
+function builtinRead(x) {
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+    return Sk.builtinFiles["files"][x];
+}
+// Here's everything you need to run a python program in skulpt
+// grab the code from your textarea
+// get a reference to your pre element for output
+// configure the output function
+// call Sk.importMainWithBody()
+function runit() { 
+   var prog = document.getElementById("yourcode").value; 
+   var mypre = document.getElementById("output"); 
+   mypre.innerHTML = ''; 
+   Sk.pre = "output";
+   Sk.configure({output:outf, read:builtinRead}); 
+   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+   var myPromise = Sk.misceval.asyncToPromise(function() {
+       return Sk.importMainWithBody("<stdin>", false, prog, true);
+   });
+   myPromise.then(function(mod) {
+       console.log('success');
+   },
+       function(err) {
+       console.log(err.toString());
+   });
+} 
+</script> 
+<center> 
+</center>
+<div class="split left">
+  <div class="centered">
+     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <h3>Questions</h3> <br>
+    <p class="ab" align="left">
+  1) Program to check if a number is Armstrong.<br><br>
+  2) Program to find Fibonacci series upton n numbers<br><br>
+  3) Program to find Prime Numbers between 1 to n.<br><br>
+  4) Program to demonstrate all List functionalities.<br><br>
+  5) Program to check if a substring is present in given string.<br><br>
+  6) Program to demonstrate dictionary.<br><br>
+  7) Program for checking if a number is palindrome.<br><br>
+  8) Program for reversing a string.<br><br>
+  <br><br>
+</p>
+</div>
+</div>
+<div class="split right">
+  <div class="centered"><br><br><br><br><br><br><br><br><br><br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <h3 style="color:#fff">Implement your code below!</h3><br>
+    <form> 
+<textarea class="aa" rows="15" cols="100"  id="yourcode"  style="background-color:black">
+</textarea><br> 
+<button type="button" onclick="runit()" style="border-radius: 25px; background-color: black; color: #39ff14;    padding: 5px 20px;">Run</button> 
+</form> 
+<div class="ac">
+<p><pre id="output" ></pre></p>
+</div>
+</div>
+</div> 
+</body>
+</html>
